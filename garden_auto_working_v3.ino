@@ -3,7 +3,7 @@
 
 const int motorPin = 9;         // Motor control pin
 const int statusLedPin = 13;    // Motor status LED pin
-const int potPin = A0;          // Potentiometer input pin
+const int potPin = A0;          // motor speed tuning 
 const int thresholdPin = A1;    // Threshold input pin
 const int moisturePin = A2;     // Capacitive soil moisture sensor pin
 
