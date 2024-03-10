@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AEDAA EQUIPMENTS GARDENING KIT</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .container {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  .logo {
+    display: block;
+    width: 100px;
+    height: auto;
+    margin: 0 auto 20px auto;
+  }
+  h1 {
+    color: #5c946e;
+    text-align: center;
+  }
+  .section {
+    margin-bottom: 30px;
+    background-color: #edf7f3;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  .section h3 {
+    color: #333;
+    margin-top: 0;
+  }
+  input[type=checkbox] {
+    margin-right: 5px;
+  }
+  input[type=range], input[type=number] {
+    width: 100%;
+    margin: 10px 0;
+    padding: 6px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+  }
+  label {
+    font-weight: 400;
+    margin-top: 10px;
+    display: inline-block;
+  }
+  .value-display {
+    margin-left: 6px;
+    font-weight: 700;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <img src="path_to_your_logo.png" alt="Logo" class="logo">
+  <h1>AEDAA EQUIPMENTS GARDENING KIT</h1>
+
+  <div class="section" id="gardeningMode">
+    <h3>Gardening Mode</h3>
+    <label for="gardeningEnable"><input type="checkbox" id="gardeningEnable"> Enable Gardening Mode</label>
+
+    <div>
+      Motor Speed (%): <span id="gardenMotorSpeedDisplay" class="value-display">50</span>%
+      <input type="range" id="gardenMotorSpeed" name="gardenMotorSpeed" min="0" max="100" value="50">
+    </div>
+
+    <div>
+      Motor Triggering Threshold (%): <span id="triggerThresholdDisplay" class="value-display">30</span>%
+      <input type="range" id="motorTriggerThreshold" name="motorTriggerThreshold" min="0" max="100" value="30">
+    </div>
+  </div>
+
+  <div class="section" id="timelyWaterMode">
+    <h3>Timely Water Mode</h3>
+    <label for="timelyWaterEnable"><input type="checkbox" id="timelyWaterEnable"> Enable Timely Water Mode</label>
+
+    <div>
+      Motor Speed2 (%): <span id="timelyMotorSpeedDisplay" class="value-display">50</span>%
+      <input type="range" id="timelyMotorSpeed" name="timelyMotorSpeed" min="0" max="100" value="50">
+    </div>
+
+    <div>
+      Water Cycle Time (minutes):
+      <input type="number" id="waterCycleTime" name="waterCycleTime" min="1" value="10">
+    </div>
+
+    <div>
+      Water Duration (minutes):
+      <input type="number" id="waterDuration" name="waterDuration" min="1" value="5">
+    </div>
+  </div>
+
+</div>
+
+<script>
+document.getElementById('gardenMotorSpeed').oninput = function() {
+  document.getElementById('gardenMotorSpeedDisplay').textContent = this.value;
+}
+
+document.getElementById('motorTriggerThreshold').oninput = function() {
+  document.getElementById('triggerThresholdDisplay').textContent = this.value;
+}
+
+document.getElementById('timelyMotorSpeed').oninput = function() {
+  document.getElementById('timelyMotorSpeedDisplay').textContent = this.value;
+}
+</script>
+
+</body>
+</html>
